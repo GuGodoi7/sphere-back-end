@@ -17,6 +17,7 @@ public class SecurityConfig {
                 .requestMatchers(HttpMethod.POST, "/login").permitAll()
                 .requestMatchers(HttpMethod.GET, "/users").permitAll()
                 .requestMatchers(HttpMethod.POST, "/users").permitAll()
+                .requestMatchers(HttpMethod.GET, "/posts").permitAll()
         );
         http.csrf(csrf -> csrf.disable());
         return http.build();
